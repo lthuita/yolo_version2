@@ -1,23 +1,24 @@
 # Requirements
-Make sure that you have the following installed:
-- [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
-- npm 
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
+  Computer
+  Access to github
+## Cloning the repo 
+ clone this repo on github or
+ run "git clone https://github.com/lthuita/yolo.git"
+ open the terminal of your computer
+ cd into the root folder of the cloned folder
 
-## Navigate to the Client Folder 
- `cd client`
+## Spinning up the containers 
+ To spin up the containers, rung the following command
+ Either 
+  "docker-compose up" if you are building the images for the first time OR
+  "docker-compose up --build" for the subsequent builds
 
-## Run the folllowing command to install the dependencies 
- `npm install`
+## To access the app
+  Open the browser on the local maching and use the following URL to access the app
+  http://localhost:3000
 
-## Run the folllowing to start the app
- `npm start`
+## Known bugs/challenges
+  No known bugs with the app
 
-## Open a new terminal and run the same commands in the backend folder
- `cd ../backend`
-
- `npm install`
-
- `npm start`
-
- ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+## Contact
+  In case you need support, contact the maintainer through the email: lthuita@gmail.com
