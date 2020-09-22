@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: frontend
+    build: ./client
+    depends_on:
+    - backend
+    ports:
+    - 3000:3000
+    networks:  
+    - overlay
+  backend:
+    container_name: backend
+    build: ./backend
+    ports:
+    - "5000:5000"
+    depends_on: 
+    - mongo
+    networks:  
+    - overlay
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - "27018:27018"
+    volumes:
+    - db-data:/var/lib/mysql/data
+    networks:  
+    - overlay
+volumes: 
+  db-data:
+
+networks: 
+  overlay:
